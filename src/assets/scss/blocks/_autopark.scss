@@ -1,0 +1,115 @@
+.autopark {
+    padding: 90px 0;
+
+    @include mobile{
+        padding: 60px 0;
+    }
+}
+
+.autopark__inner {}
+
+.autopark__inner__title {
+    padding-bottom: 80px;
+
+    @include mobile{
+        padding-bottom: 60px;
+    }
+}
+
+.swiper__autopark {
+    padding: 0 50px 60px !important;
+
+    @include for-desktop{
+        padding: 0 0 60px !important;
+    }
+
+    & .swiper-slide{
+        display: flex;
+    }
+}
+
+.swiper__slide__autopark {
+    border-radius: 30px;
+    background: #FFF;
+    /* Shadow */
+    box-shadow: 0px 32px 34px 0px rgba(0, 0, 0, 0.13);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    @include  burger-header{
+        border-radius: 0;
+    }
+}
+
+.swiper__slide__autopark__image {
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.swiper__slide__autopark__title {
+    display: block;
+    color: var(--Black, #1B1C1E);
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0.603px;
+    text-align: center;
+    // min-height: 110px;
+
+    // @include autopark{
+    //     min-height: 74px;
+    // }
+
+    // @include small-tablet{
+    //     min-height: 110px;
+    // }
+
+    // @include burger-header{
+    //     min-height: 74px;
+    // }
+}
+
+
+.swiper__slide__autopark__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    max-width: 350px;
+    margin: 20px auto;
+    padding: 0 15px;
+
+
+    &>li {
+        border-radius: 20px;
+        background: #5F6973;
+        text-align: center;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 133.333%;
+        letter-spacing: 0.1px;
+        padding: 10px 20px;
+
+        @include small-tablet{
+            font-size: 12px;
+            padding: 5px 12px;
+        }
+    }
+}
+
+.swiper__transfer__item__button {
+    flex-grow: 1;
+    max-height: 58px;
+    margin-top: auto;
+
+    @include burger-header{
+        border-radius: 0;
+    }
+}
+
+.swiper-pagination {}
+
+.transfer-paagination {}

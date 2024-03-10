@@ -1,0 +1,14 @@
+.quiz{
+    padding: 9rem 0;
+
+    @include mobile{
+        padding: 6rem 0;
+    }
+}
+.quiz__inner__title{
+    padding-bottom: 8rem;
+
+    @include mobile{
+        padding-bottom: 6rem;
+    }
+}

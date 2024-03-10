@@ -1,0 +1,110 @@
+.transfer {
+    background: rgba(227, 228, 230, 0.50);
+    padding: 90px 0;
+
+    @include mobile{
+        padding:  60px 0;
+    }
+}
+
+.transfer__inner {}
+
+.transfer__inner__title {
+    padding-bottom: 80px;
+
+    @include mobile{
+        padding-bottom: 60px;
+    }
+}
+
+.swiper__transfer {
+    padding-bottom: 60px !important;
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+
+    @include for-desktop{
+        padding: 0 0 60px !important;
+    }
+
+    & .swiper-slide{
+        display: flex;
+    }
+}
+
+.swiper__transfer__item {
+    border-radius: 30px;
+    background: #FFF;
+    /* Shadow */
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.13);
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    align-items: center;
+    overflow: hidden;
+
+    @include burger-header{
+        border-radius: 0;
+    }
+}
+
+.swiper__transfer__item__image {
+    display: block;
+    width: 100%;
+    min-height: 232px;
+
+    @include tablet{
+        min-height: 223px;
+    }
+
+    @include burger-header{
+        min-height: 412px;
+    }
+    @include mobile{
+        min-height: calc((1vw + 1vh) * 28);
+    }
+}
+
+.swiper__transfer__item__title {
+    color: var(--Black, #1B1C1E);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0.603px;
+    text-align: center;
+    flex-grow: 1;
+    // word-break: break-all;
+    hyphens: manual;
+}
+
+.swiper__transfer__item__button {
+    display: block;
+    width: 100%;
+    padding: 21px 0;
+
+    @include for-desktop{
+        border-radius: 0;
+    }
+}
+
+.transfer-pagination{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 30px;
+}
+
+.swiper-pagination-bullet{
+    width: 10px;
+    height: 10px;
+    margin: 0 !important;
+    background: var(--Blue, #2B6AB0) !important;
+    transition: background 0.3s linear;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active{
+    background: white !important;
+    border: 1px solid #2B6AB0;
+    width: 15px;
+    height: 15px;
+}

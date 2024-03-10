@@ -1,0 +1,237 @@
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 100;
+    transform-origin: 0 0;
+    transform: rotateX(90deg);
+    transition: all 0.6s ease-in-out;
+}
+
+.active.modal{
+    display: block;
+}
+.animation.modal{
+    transform: rotateX(0);
+}
+
+.modal__inner {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    column-gap: 60px;
+
+    @include for-desktop{
+        flex-direction: column;
+        padding-top: 50px;
+        align-items: flex-start;
+        overflow-y: auto;
+    }
+
+    @include mobile{
+        padding-top: 30px;
+    }
+}
+
+.modal__half {
+    flex-basis: 50%;
+
+    @include for-desktop{
+        flex-basis: unset;
+    }
+}
+
+.modal__inner__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal__inner__left__title {
+    font-family: Montserrat;
+    font-size: 110px;
+    font-weight: 500;
+    line-height: 0.85em;
+    color: #000000;
+    margin: 0;
+    margin-bottom: 40px;
+
+    @include for-desktop{
+        font-size: 48px;
+        line-height: 1em;
+    }
+
+    @include mobile{
+        margin-bottom: 20px;
+        font-size: 34px;
+    }
+}
+
+.modal__inner__subtitle {
+    color: #54595F;
+    font-size: 18px;
+    margin-bottom: 100px;
+
+    @include mobile{
+        margin-bottom: 30px;
+    }
+}
+
+.modal__inner__wrapper {
+    display: flex;
+    align-items: center;
+    color: #000000;
+
+    @include for-desktop{
+        column-gap: 70px;
+    }
+
+    @include mobile{
+        flex-direction: column;
+        row-gap: 30px;
+        align-items: flex-start;
+    }
+}
+
+.modal__inner__wrapper__data {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    row-gap: 10px;
+
+    @include for-desktop{
+        flex-basis: unset;
+    }
+
+    & strong {
+        display: block;
+        font-size: 13px;
+        font-weight: 700;
+        color: #000000;
+        letter-spacing: 0.1px;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    & span {
+        display: block;
+        font-size: 16px;
+        line-height: 1.18em;
+        color: #54595F;
+    }
+
+    & a {
+        display: block;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.18em;
+        color: #000000 !important;
+    }
+}
+
+.modal__inner__right{
+
+}
+
+.modal__inner__close{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 100;
+    font-size: 35px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #000000;
+    font-weight: 700;
+
+    @include mobile{
+        top: 15px;
+        right: 15px;
+    }
+}
+.my__row{
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+
+    @include for-desktop{
+        padding-top: 30px;
+        max-width: 540px;
+    }
+
+    @include mobile{
+        flex-direction: column;
+    }
+}
+
+.my__col{
+    overflow: hidden;
+    @include for-desktop{
+        width: 45% !important;
+    }
+
+    &+.my__col{
+
+        @include for-desktop{
+            margin-left: 50px;
+        }
+
+        @include mobile{
+            margin-left: 0;
+        }
+    }
+
+    & input[type=tel],
+    & input[type=text]{
+        border: none;
+        border-bottom: 1px solid #0000001F;
+        padding-top: 10px; 
+        padding-bottom: 10px; 
+        font-size: 13px;
+        color: #000000;
+
+        &:active, &:focus{
+            outline: none;
+        }
+
+        &::placeholder{
+            color: #000000;
+        }
+    }
+}
+
+.my__submit{
+    padding-right: 0 !important;
+
+    @include for-desktop{
+        margin-top: 50px;
+        width: 100%;
+    }
+
+    @include mobile{
+        margin-top: 20px;
+    }
+
+    & input[type='submit']{
+        display: block;
+        width: 100%;
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 1.5em;
+        background-color: #2B69B0;
+        min-height: 60px;
+        border: none;
+        transition: all 0.2s linear;
+
+        &:hover{
+            transform: translateY(-1.5px);
+        }
+    }
+}

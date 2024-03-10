@@ -1,0 +1,17 @@
+.work{
+    background: rgba(227, 228, 230, 0.50);
+}
+.work__inner{
+   padding: 90px 0; 
+
+   @include mobile{
+    padding: 60px 0;
+}
+}
+
+.work__inner__wrapper__item__text b,
+.work__inner__wrapper__item__text strong{
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+}

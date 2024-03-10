@@ -1,0 +1,89 @@
+.hero {
+    @include bg-cover;
+    height: 100vh;
+    position: relative;
+    // background-attachment: fixed;
+    background-position: right;
+}
+
+.hero__inner {}
+
+.hero__inner__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 27px;
+
+    @include mobile{
+        flex-direction: column;
+        row-gap: 30px;
+    }
+}
+
+.hero__inner__top__logo {}
+
+.hero__inner__top__box {
+    display: flex;
+    flex-direction: column;
+    row-gap: 11px;
+}
+
+.hero__inner__top__box__phone {
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 20.4px;
+    letter-spacing: 0.1px;
+    border-bottom: 1px solid transparent;
+    transition: border 0.2s linear;
+
+    &:hover{
+        border-color: #fff;
+    }
+}
+
+
+.hero__inner__top__box__callback {
+    padding: 12px 32px;
+}
+
+
+.hero__inner__bottom {
+    position: absolute;
+    top: calc(50% - 65px);
+    left: 0;
+    right: 0;
+    
+    @include mobile{
+        top: calc(50% - 35px);
+    }
+}
+
+.hero__inner__bottom__title {
+    max-width: 1128px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.hero__inner__bottom__subtitle {
+    display: block;
+    max-width: 840px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 35px;
+    line-height: 128.571%; /* 128.571% */
+
+    @include for-desktop{
+        font-size: 25px;
+    }
+
+    @include small-tablet{
+        font-size: 20px;
+    }
+}
+
+.hero__inner__bottom__button {
+    display: block;
+    padding: 20px 35px;
+    margin: 0 auto;
+}

@@ -1,0 +1,15 @@
+.container{
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+
+    &--small{
+        max-width: var(--container-small-width);
+    }
+
+    &_slider{
+        margin: 0 auto;
+        max-width: 1064px;
+    }
+}

@@ -1,0 +1,140 @@
+.knowledge {
+    padding: 70px 0 50px;
+    border-radius: 30px;
+    // opacity: 0.2;
+    background: linear-gradient(180deg, rgba(243, 168, 50, 0.3) 0%, rgba(243, 168, 50, 0.00) 100%);
+    position: relative;
+    overflow: hidden;
+    
+    @include small-tablet{
+        border-radius: 0;
+    }
+
+    @include mobile{
+        padding: 60px 0;
+    }
+}
+
+.knowledge__inner {}
+
+.knowledge__inner__title {
+    max-width: 1057px;
+    margin: 0 auto 30px;
+    text-align: center;
+    // line-height: 64px;
+}
+
+.knowledge__inner__text {
+    display: block;
+    margin: 0 auto 60px;
+    text-align: center;
+    color: #FFF;
+    font-size: 35px;
+    line-height: 128.571%;
+    /*  */
+    @include tablet{
+        font-size: 30px;
+    }
+
+    @include maps {
+        font-size: 20px;
+    }
+}
+
+.knowledge__inner__form form,
+.knowledge__inner__form form p {
+    margin-bottom: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+
+    @include small-tablet{
+        flex-direction: column;
+        row-gap: 20px;
+        margin-bottom: 60px;
+    }
+
+    & input[type='tel'],
+    & input[type='text'],
+    .knowledge__input {
+        width: 100%;
+        max-width: 400px;
+        border-radius: 55px;
+        background: #FFF;
+        color: #000;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 16px;
+        /* 80% */
+        padding: 22px 40px;
+        transition: border 0.3s linear;
+        border: 2px solid transparent;
+
+        &:active,
+        &:checked,
+        &:focus {
+            outline: none;
+        }
+
+        &:hover {
+            border-color: #2B6AB0;
+        }
+
+        &:placeholder {
+            color: #000;
+        }
+
+        @include small-tablet{
+            padding: 17px 30px;
+        }
+    }
+
+    & input[type='submit'] {
+        width: 100%;
+        max-width: 290px;
+        min-height: 71px;
+        border-radius: 55px;
+        background: var(--Blue, #2B6AB0);
+        color: #FFF;
+        text-align: center;
+        font-size: 30px;
+        line-height: 16px;
+        padding: 22px 40px;
+        /* 53.333% */
+        transition: all 0.3s linear;
+        cursor: pointer;
+        border: 1px solid transparent;
+
+        &:hover {
+            background: darken($color: #2B6AB0, $amount: 10);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        @include small-tablet{
+            max-width: 400px;
+            min-height: 61px;
+            font-size: 20px;
+            padding: 21px 30px;
+        }
+    }
+
+}
+
+.knowledge__inner__politics {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    line-height: 20px;
+    /* 133.333% */
+}
+
+.knowledge__background {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
